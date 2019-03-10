@@ -1,0 +1,26 @@
+.main {
+    margin-top: 50px;
+}
+.img-res {
+    height: 90px;
+}
+.card-img {
+    margin-bottom: 50px;
+    height: 115px;
+    text-align: center;
+    cursor: pointer;
+}
+.card-img:hover{
+    background: #eee;
+}
+.card-img h1{
+    font-size: 16px;
+    font-weight: 600;
+    padding-top: 12px;
+}
+.text {
+    text-align: center;
+}
+.link {
+    color: black;
+}

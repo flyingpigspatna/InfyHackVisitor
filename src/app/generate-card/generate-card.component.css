@@ -1,0 +1,21 @@
+.id_card{
+    padding: 20px;
+    margin-top: 40px;
+    text-align: center;
+}
+.id_card img{
+    width: 66%;
+}
+.card_container{
+    margin: 0 auto;
+    width: 30%;
+    border: solid transparent 1px;
+    box-shadow: 0px 0px 6px #ccc;
+    margin-top: 30px;
+    border-radius: 3px;
+    background: #bbdaf569;
+    border: solid 1px #09569c8a;
+}
+.id_card div{
+    margin-top: 10px;
+}

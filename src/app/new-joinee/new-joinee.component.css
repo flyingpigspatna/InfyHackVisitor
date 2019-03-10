@@ -1,0 +1,30 @@
+.new_joinee_container{
+    margin: 0 auto;
+    width: 60%;
+}
+.visitor_category{
+    padding: 20px;
+}
+.visitor_category button{
+    width: 250px;
+    font-weight: 600;
+}
+.user-aadhar-category label{
+    padding-right: 30px;
+}
+.margin {
+    margin-left: 10px;
+}
+.user_category label{
+    font-weight: 600;
+}
+.employee_details{
+    padding-top: 40px
+}
+.employee_details label{
+    font-weight: 400;
+}
+.employee_details button{
+    float: right;
+    width: 200px;
+}

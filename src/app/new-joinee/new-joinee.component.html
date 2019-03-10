@@ -1,0 +1,85 @@
+<div class="visitor_category">
+  <button class="btn btn-outline-primary margin" (click)="userSelected(0)">Already have visitor Id</button>
+  <button class="btn btn-outline-primary margin" (click)="userSelected(1)">New Visitor</button>
+</div>
+
+
+
+<div class="row user_category" *ngIf="isUserSelected">
+  <div class="col-xs-12 col-sm-7" style="padding-top: 20px; padding-left: 45px;">
+    <form>
+      <div class="form-group row">
+        <label for="empid" class="col-sm-2">{{labelName}}</label>
+        <input type="number" name="employeeId" class="form-control col-sm-8" id="text" [(ngModel)]='employeeId'>
+      </div>
+
+      <div class="form-group ">
+        <div class="user-aadhar-category" >
+        <label for="email">Aadhar?</label>
+        <div class="form-check form-check-inline" >
+          <input class="form-check-input" 
+          type="radio" 
+          name="aadhar" id="aadharPresent" 
+          value="0"
+          [(ngModel)]="aadhar"
+          (change)="submit()">
+          <label class="form-check-label" for="aadharPresent">
+            Yes
+          </label>
+        </div>
+        <div class="form-check form-check-inline" >
+            <input class="form-check-input" 
+            type="radio" 
+            name="aadhar" id="aadharNotPresent" 
+            value="1"
+            (change)="unsubmit()"
+            [(ngModel)]="aadhar">
+            <label class="form-check-label" for="aadharNotPresent">
+              No
+            </label>
+          </div>
+        </div>
+
+          <div class="employee_details" *ngIf="aadhar==1">
+              <div class="form-group row">
+                    <label for="inputEmail4" class="col-sm-2">Name</label>
+                    <input name="userName" type="Name" class="form-control col-sm-8" id="inputEmail4" placeholder="Name" [(ngModel)]="userName">
+                </div>
+                <div class="form-group row">
+                  <label for="inputAddress" class="col-sm-2">Address</label>
+                  <input type="text" class="form-control col-sm-8" id="inputAddress" placeholder="1234 Main St">
+                </div>
+                <div class="form-group row">
+                  <label for="inputAddress2" class="col-sm-2">Address 2</label>
+                  <input type="text" class="form-control col-sm-8" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-sm-4">
+                    <label for="inputCity">City</label>
+                    <input type="text" class="form-control" id="inputCity">
+                  </div>
+                  <div class="form-group col-sm-4">
+                    <label for="inputState">State</label>
+                    <input type="text" class="form-control" id="inputCity2">
+                  </div>
+                  <div class="form-group col-sm-2">
+                    <label for="inputZip">Zip</label>
+                    <input type="text" class="form-control" id="inputZip">
+                  </div>
+                </div>
+                <button class="btn btn-primary submit-button" (click)="getDetailsManual()">Submit</button>
+          </div>
+
+    </div>
+    </form>
+  </div>
+  <div class="col-xs-12 col-sm-5">
+    <ng-container *ngIf="!!showWebcam">
+        <app-webcam (emitImage)="emitImage($event)"></app-webcam>
+    </ng-container>
+    <ng-container *ngIf="!!showScanner">
+        <app-scanner (emitDetails)="getDetails($event)"></app-scanner>
+    </ng-container>
+  </div>
+</div>
+

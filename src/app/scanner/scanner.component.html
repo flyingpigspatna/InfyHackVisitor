@@ -1,0 +1,9 @@
+<div class="dimension">
+    <zxing-scanner #scanner [scannerEnabled]="true" [device]="device"
+    (camerasFound)="foundCameras($event)"
+    (scanSuccess)="scanSuccess($event)"
+    (scanError)="scanError($event)"
+    (scanFailure)="scanFailed($event)"
+    (scanComplete)="scanComplete($event)"></zxing-scanner>
+</div>
+

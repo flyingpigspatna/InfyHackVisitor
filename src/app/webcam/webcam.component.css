@@ -1,0 +1,16 @@
+.margin {
+    margin: 20px;
+    position: relative;
+}
+.canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.counter {
+    position: absolute;
+    top: 90px;
+    left: 150px;
+    color: red;
+    font-size: 40px;
+}
