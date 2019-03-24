@@ -12,7 +12,7 @@ import { BackEndServiceService } from '../service/back-end-service.service';
 export class NewJoineeComponent implements OnInit {
   userName: string;
   dob: any;
-  isUserSelected = false;
+  isUserSelected = true;
   userData;
   employeeId = '';
   showScanner = false;
